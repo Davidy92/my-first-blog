@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}
+{% block title %}Post_List{% endblock title %}
+
+{% block content %}
+  <div>
+    <h1><a href="/">Django Girl Blog</a></h1>
+  </div>
+  {% for post in posts  %}
+    <div class="">
+      <em>Published by: <strong>{{ post.author }}</strong></em>
+      <p>published: {{ post.created_date|date:"F d, Y" }}</p>
+      <h2><a href="#">My {{post.id}} Post</a></h2>
+      <p>{{ post.text }}</p><br>
+    </div>
+  {% endfor %}
+{% endblock content %}
