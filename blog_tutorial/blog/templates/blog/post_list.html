@@ -10,7 +10,7 @@
       <em>Published by: <strong>{{ post.author }}</strong></em>
       <p>published: {{ post.created_date|date:"F d, Y" }}</p>
       <h2><a href="#">My {{post.id}} Post</a></h2>
-      <p>{{ post.text }}</p><br>
+      <p>{{ post.text|linebreaksbr }}</p>
     </div>
   {% endfor %}
 {% endblock content %}
